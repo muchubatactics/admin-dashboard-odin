@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    font-size: calc(1vh + 1vw);
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Inter';
     height: 100vh;
     margin: 0%;
     padding: 0%;
@@ -8,26 +14,40 @@ body {
 .container {
     margin: 0%;
     height: 100vh;
-    background-color: gray;
+    background-color: #d7f2ff;
     display: grid;
     grid-template: 1fr 5fr / 1fr 4fr;
 }
 
 .sidebar {
     padding-left: 5%;
-    padding-top: 5%;
+    padding-top: 0.5rem;
     background-color: #0ea5e9;
     grid-row: 1 / 3;
     color: white;
+    min-width: 25%;
 }
 
-.top, .middle, .down {
+.sidebar h3 {
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.sidebar .top > h1{
+    font-size: 1.5rem;
+}
+
+.sidebar .top, .sidebar .middle, .sidebar .down {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-auto-rows: 40px;
+    grid-auto-rows: 1.7rem;
     align-items: center;
     align-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+}
+
+.sidebar .middle {
+    margin-bottom: 2rem;
 }
 
 .sidebar svg {
@@ -35,18 +55,87 @@ body {
     justify-self: center;
 }
 
-.top svg {
-    height: 40px;
+.sidebar .top svg {
+    height: calc(1.5 * 1rem);
     width: auto;
 }
 
-.middle svg, .down svg {
-    height: 30px;
+.sidebar .middle svg, .sidebar .down svg {
+    height: calc(1.1 * 1rem);
     width: auto;
 }
 
 
 .header {
     background-color: white;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
+.toph {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.toph .name {
+    font-size: 1rem;
+    font-weight: 600;
+    justify-self: start;
+}
+
+.search-bar {
+    width: 80%;
+    height: 80%;
+    background-color: #d7f2ff;
+    color: aqua;
+    border-radius: 30px;
+    justify-self: start;
+
+}
+
+.header svg {
+    height: 1rem;
+    width: auto;
+}
+.header .icon img{
+    height: 1.8rem;
+    width: auto;
+    border-radius: 100%;
+}
+
+.header .downh .icon img {
+    height: 3rem;
+    width: auto;
+    border-radius: 100%;
+}
+
+.downh {
+    display: grid;
+    grid-template-columns: 1fr 9fr 2fr 2fr 2fr;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.downh .greet {
+    padding-left: 0.5rem;
+    font-size: 0.7rem;
+}
+.downh .greet span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.downh button {
+    background-color: #0ea5e9;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: 0px;
+    border-radius: 30px;
+    height: 50%;
+    width: 80%;
+}
